@@ -2,6 +2,7 @@ import { ExamProvider, useExam } from './context/ExamContext'
 import HomeScreen from './components/HomeScreen'
 import QuizScreen from './components/QuizScreen'
 import ResultScreen from './components/ResultScreen'
+import StatusBar from './components/StatusBar'
 import { useState, useEffect } from 'react'
 
 function Header() {
@@ -55,6 +56,7 @@ function AppContent() {
             <Header />
             <main>
               <QuizScreen />
+              <StatusBar />
             </main>
           </>
         )}
