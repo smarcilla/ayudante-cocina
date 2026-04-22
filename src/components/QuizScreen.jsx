@@ -38,6 +38,14 @@ export default function QuizScreen() {
 
   const handleAnswer = (idx) => {
     dispatch({ type: 'ANSWER', payload: { index: current, answer: idx } })
+    
+    // Auto-advance after 200ms if not last question
+    const isLastQuestion = current >= (questions?.length || 0) - 1
+    if (!isLastQuestion) {
+      setTimeout(() => {
+        dispatch({ type: 'NAVIGATE', payload: current + 1 })
+      }, 200)
+    }
   }
 
   const handlePrev = () => {
