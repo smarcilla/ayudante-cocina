@@ -43,19 +43,19 @@ export default function HomeScreen() {
     <div className="panel">
       <h3 style={{marginTop:0}}>Configuración del Test</h3>
       <div style={{marginBottom:20}}>
-        <label style={{display:'block', marginBottom:8, fontSize:12, color:'var(--muted)'}}>1. CARGAR ARCHIVO JSON</label>
-        <input type="file" ref={fileInputRef} accept=".json" style={{fontSize:14}} />
+        <label htmlFor="fileInput" style={{display:'block', marginBottom:8, fontSize:12, color:'var(--muted)'}}>1. CARGAR ARCHIVO JSON</label>
+        <input type="file" id="fileInput" ref={fileInputRef} accept=".json" style={{fontSize:14}} />
       </div>
       <div style={{display:'grid', gridTemplateColumns:'1fr 1fr', gap:15, marginBottom:20}}>
         <div>
-          <label style={{display:'block', fontSize:12, color:'var(--muted)'}}>MODO</label>
+          <label htmlFor="modeSel" style={{display:'block', fontSize:12, color:'var(--muted)'}}>MODO</label>
           <select id="modeSel" style={{width:'100%', padding:10, borderRadius:8, background:'#1b2550', color:'#fff', border:'1px solid var(--line)'}}>
             <option value="exam">Examen Oficial (Aleatorio)</option>
             <option value="practice">Entrenamiento (Todas las preguntas)</option>
           </select>
         </div>
         <div>
-          <label style={{display:'block', fontSize:12, color:'var(--muted)'}}>TIEMPO</label>
+          <label htmlFor="timeSel" style={{display:'block', fontSize:12, color:'var(--muted)'}}>TIEMPO</label>
           <select id="timeSel" style={{width:'100%', padding:10, borderRadius:8, background:'#1b2550', color:'#fff', border:'1px solid var(--line)'}}>
             <option value="115">115 minutos</option>
             <option value="60">60 minutos</option>

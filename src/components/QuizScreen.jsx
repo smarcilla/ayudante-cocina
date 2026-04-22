@@ -67,14 +67,16 @@ export default function QuizScreen() {
         {options.map((opt, idx) => {
           const isSelected = currentAnswers[current] === idx
           return (
-            <div
+            <button
               key={idx}
+              type="button"
               className={`opt ${isSelected ? 'selected' : ''}`}
               onClick={() => handleAnswer(idx)}
+              aria-pressed={isSelected}
             >
               <span style={{opacity:0.5, fontWeight:'bold'}}>{String.fromCharCode(65 + idx)}</span>
               <span>{opt}</span>
-            </div>
+            </button>
           )
         })}
       </div>
