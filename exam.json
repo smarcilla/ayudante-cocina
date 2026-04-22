@@ -1,0 +1,441 @@
+{
+  "meta": {
+    "exam": "GVA 84/26 - Ayudante de Cocina",
+    "version": "1.0",
+    "description": "Simulador oficial. Bloque general (10 preg) + Específico (20 preg). Penalización -0.25"
+  },
+  "config": {
+    "blocks": [
+      {
+        "id": "general",
+        "label": "Parte General",
+        "numQuestions": 10
+      },
+      {
+        "id": "especifico",
+        "label": "Parte Específica",
+        "numQuestions": 20
+      }
+    ]
+  },
+  "questions": [
+    {
+      "id": 1,
+      "block": "general",
+      "category": "Constitución",
+      "question": "¿Qué título tiene la Constitución Española de 1978?",
+      "options": [
+        "Título Preliminar",
+        "Preámbulo",
+        "Título I: Derechos y deberes fundamentales",
+        "Título 0: Principios generales"
+      ],
+      "correct": 1,
+      "explanation": "La CE tiene un Preámbulo y 169 artículos distribuidos en Títulos Preliminar y 10 Títulos."
+    },
+    {
+      "id": 2,
+      "block": "general",
+      "category": "Estatuto Autonomía",
+      "question": "¿Cuándo se aprobó el Estatuto de Autonomía de la Comunitat Valenciana?",
+      "options": [
+        "1978",
+        "1982",
+        "1983",
+        "1996"
+      ],
+      "correct": 1,
+      "explanation": "Ley Orgánica 5/1982, de 1 de julio. Reformado en 2006 (L.O. 1/2006)."
+    },
+    {
+      "id": 3,
+      "block": "general",
+      "category": "Ley Función Pública",
+      "question": "La Ley de Función Pública Valenciana es:",
+      "options": [
+        "Ley 10/2010",
+        "Ley 5/1983",
+        "Ley 1/1984",
+        "Ley 39/2015"
+      ],
+      "correct": 0,
+      "explanation": "Ley 10/2010, de 19 de noviembre, del Servicio Valenciano de Empleo Público."
+    },
+    {
+      "id": 4,
+      "block": "general",
+      "category": "Igualdad",
+      "question": "La Ley de Igualdad efectiva de mujeres y hombres es de:",
+      "options": [
+        "2004",
+        "2007",
+        "2010",
+        "2011"
+      ],
+      "correct": 1,
+      "explanation": "Ley Orgánica 3/2007, de 22 de marzo."
+    },
+    {
+      "id": 5,
+      "block": "general",
+      "category": "Constitución",
+      "question": "¿Cuántos artículos tiene la Constitución Española?",
+      "options": [
+        "149",
+        "169",
+        "178",
+        "189"
+      ],
+      "correct": 1,
+      "explanation": "169 artículos + Disposiciones adicionales, transitorias, derogatoria y final."
+    },
+    {
+      "id": 6,
+      "block": "general",
+      "category": "Estatuto Función Pública",
+      "question": "El acceso al empleo público se rige por:",
+      "options": [
+        "Libre designación",
+        "Oposición, concurso-oposición o concurso",
+        "Nombramiento de confianza",
+        "Contrato temporal"
+      ],
+      "correct": 1,
+      "explanation": "Art. 55 Ley 10/2010: principios de igualdad, mérito, capacidad y publicidad."
+    },
+    {
+      "id": 7,
+      "block": "general",
+      "category": "Ley Igualdad",
+      "question": "La Ley de Igualdad crea el Consejo Valenciano de la Mujer:",
+      "options": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correct": 0,
+      "explanation": "Ley 6/2010, de 27 de abril. Crea el Consejo Valenciano de la Mujer."
+    },
+    {
+      "id": 8,
+      "block": "general",
+      "category": "Estatuto Autonomía",
+      "question": "La Comunitat Valenciana tiene lengua cooficial:",
+      "options": [
+        "Catalán",
+        "Valenciano",
+        "Gallego",
+        "Euskera"
+      ],
+      "correct": 1,
+      "explanation": "Art. 6 Estatuto: el valenciano es lengua oficial junto al castellano."
+    },
+    {
+      "id": 9,
+      "block": "general",
+      "category": "Función Pública",
+      "question": "La jornada máxima anual en GVA es:",
+      "options": [
+        "1.760 horas",
+        "1.800 horas",
+        "1.826 horas",
+        "1.850 horas"
+      ],
+      "correct": 0,
+      "explanation": "Art. 44 Ley 10/2010: 1.760 horas anuales."
+    },
+    {
+      "id": 10,
+      "block": "general",
+      "category": "Igualdad",
+      "question": "La perspectiva de género es transversal según:",
+      "options": [
+        "Ley 10/2010",
+        "Ley 3/2007",
+        "Ley 5/1982",
+        "Ley 1/1984"
+      ],
+      "correct": 1,
+      "explanation": "Ley Orgánica 3/2007, art. 15: administración pública debe adoptar perspectiva de género."
+    },
+    {
+      "id": 11,
+      "block": "especifico",
+      "category": "Higiene",
+      "question": "Temperatura máxima de refrigeración positiva según Reglamento (CE) 852/2004:",
+      "options": [
+        "4ºC",
+        "6ºC",
+        "8ºC",
+        "10ºC"
+      ],
+      "correct": 2,
+      "explanation": "≤8ºC para refrigeración positiva. ≤-18ºC congelación."
+    },
+    {
+      "id": 12,
+      "block": "especifico",
+      "category": "APPCC",
+      "question": "APPCC significa:",
+      "options": [
+        "Análisis de Peligros y Puntos Críticos de Control",
+        "Análisis de Procesos y Puntos Críticos de Cocina",
+        "Autocontrol de Productos y Planos Críticos de Cocina",
+        "Análisis de Prácticas y Puntos Críticos de Control"
+      ],
+      "correct": 0,
+      "explanation": "Reglamento (CE) 852/2004. Sistema preventivo obligatorio."
+    },
+    {
+      "id": 13,
+      "block": "especifico",
+      "category": "Normativa",
+      "question": "Manipulador de alimentos debe tener certificado según:",
+      "options": [
+        "Real Decreto 3484/2000",
+        "Real Decreto 742/2013",
+        "Reglamento 852/2004",
+        "Ley 17/2011"
+      ],
+      "correct": 1,
+      "explanation": "RD 742/2013 requisitos higiene manipuladores alimentos."
+    },
+    {
+      "id": 14,
+      "block": "especifico",
+      "category": "Higiene",
+      "question": "Limpieza de superficies en contacto con alimentos:",
+      "options": [
+        "Diaria",
+        "Semanal",
+        "Cada uso",
+        "Mensual"
+      ],
+      "correct": 2,
+      "explanation": "Cada uso o al final de jornada. Reglamento 852/2004 Anexo II Cap. IV."
+    },
+    {
+      "id": 15,
+      "block": "especifico",
+      "category": "PRL",
+      "question": "Equipo de cocina más peligroso por atrapamientos:",
+      "options": [
+        "Horno",
+        "Batidora planetaria",
+        "Microondas",
+        "Frigorífico"
+      ],
+      "correct": 1,
+      "explanation": "Maquinaria con partes móviles. Ley 31/1995 PRL."
+    },
+    {
+      "id": 16,
+      "block": "especifico",
+      "category": "Materias primas",
+      "question": "Temperatura descongelación segura:",
+      "options": [
+        "Habiente",
+        "Frigorífico (0-4ºC)",
+        "Microondas",
+        "Agua caliente"
+      ],
+      "correct": 1,
+      "explanation": "Descongelar en frigorífico evita zona peligro (4-60ºC)."
+    },
+    {
+      "id": 17,
+      "block": "especifico",
+      "category": "Normativa escolar",
+      "question": "Ley alimentación saludable centros educativos:",
+      "options": [
+        "Ley 17/2011",
+        "Ley 22/2018",
+        "Real Decreto 130/2019",
+        "Todas las anteriores"
+      ],
+      "correct": 3,
+      "explanation": "Marco completo: etiquetado (17/2011), centros educativos (22/2018), menús escolares (RD 130/2019)."
+    },
+    {
+      "id": 18,
+      "block": "especifico",
+      "category": "Anti-desperdicio",
+      "question": "Ley 3/2022 anti-desperdicio alimentario afecta a:",
+      "options": [
+        "Solo supermercados",
+        "Distribuidores y hostelería",
+        "Solo productores",
+        "Solo consumidores"
+      ],
+      "correct": 1,
+      "explanation": "Obliga donación alimentos aptos a bancos alimentos."
+    },
+    {
+      "id": 19,
+      "block": "especifico",
+      "category": "Higiene",
+      "question": "Zona de peligro microbiano (temperatura):",
+      "options": [
+        "0-4ºC",
+        "4-60ºC",
+        "60-100ºC",
+        "100ºC"
+      ],
+      "correct": 1,
+      "explanation": "Multiplicación bacteriana óptima 4-60ºC."
+    },
+    {
+      "id": 20,
+      "block": "especifico",
+      "category": "Equipos",
+      "question": "Cuchillos deben lavarse:",
+      "options": [
+        "En lavavajillas",
+        "A mano con agua caliente >60ºC",
+        "Ambos",
+        "Solo desinfectante"
+      ],
+      "correct": 2,
+      "explanation": "Cuchillos a mano o lavavajillas industrial. Reglamento 852/2004."
+    },
+    {
+      "id": 21,
+      "block": "especifico",
+      "category": "Normativa",
+      "question": "APPCC debe documentarse en:",
+      "options": [
+        "Manual de autocontrol",
+        "Libro de registro",
+        "Ambos",
+        "Ninguno obligatorio"
+      ],
+      "correct": 2,
+      "explanation": "Obligatorio plan APPCC documentado."
+    },
+    {
+      "id": 22,
+      "block": "especifico",
+      "category": "PRL",
+      "question": "EPP obligatoria en cocina:",
+      "options": [
+        "Guantes antideslizantes",
+        "Gafas",
+        "Casco",
+        "Arnés"
+      ],
+      "correct": 0,
+      "explanation": "Guantes corte/deslizamiento, calzado antideslizante, delantal."
+    },
+    {
+      "id": 23,
+      "block": "especifico",
+      "category": "Menús escolares",
+      "question": "Menús escolares deben incluir:",
+      "options": [
+        "4-5 grupos alimentos",
+        "Solo 3 grupos",
+        "Solo postre",
+        "Solo entrante"
+      ],
+      "correct": 0,
+      "explanation": "RD 130/2019: 4-5 grupos + agua."
+    },
+    {
+      "id": 24,
+      "block": "especifico",
+      "category": "Infancia",
+      "question": "Ley derechos infancia obliga:",
+      "options": [
+        "Menús adaptados alérgicos",
+        "Solo juego",
+        "Solo educación",
+        "Solo salud"
+      ],
+      "correct": 0,
+      "explanation": "Ley Orgánica 8/2021 protección integral infancia."
+    },
+    {
+      "id": 25,
+      "block": "especifico",
+      "category": "Higiene",
+      "question": "Caducidad yogur abierto:",
+      "options": [
+        "24h",
+        "48h",
+        "72h",
+        "1 semana"
+      ],
+      "correct": 1,
+      "explanation": "Lácteos abiertos: 48h en frío."
+    },
+    {
+      "id": 26,
+      "block": "especifico",
+      "category": "Equipos",
+      "question": "Mantenimiento freidoras:",
+      "options": [
+        "Diario",
+        "Semanal",
+        "Mensual",
+        "Anual"
+      ],
+      "correct": 1,
+      "explanation": "Control semanal aceites usados (acidez, polaridad)."
+    },
+    {
+      "id": 27,
+      "block": "especifico",
+      "category": "Anti-desperdicio",
+      "question": "Prioridad Ley 3/2022:",
+      "options": [
+        "1. Donación, 2. Alimentación animal",
+        "1. Compostaje, 2. Donación",
+        "1. Incineración",
+        "1. Vertido"
+      ],
+      "correct": 0,
+      "explanation": "Jerarquía: prevención > donación > alimentación animal > compost."
+    },
+    {
+      "id": 28,
+      "block": "especifico",
+      "category": "Normativa",
+      "question": "Responsable APPCC en cocina:",
+      "options": [
+        "Cocinero jefe",
+        "Propietario/gestor",
+        "Ayudante",
+        "Camarero"
+      ],
+      "correct": 1,
+      "explanation": "Responsabilidad legal del titular empresa."
+    },
+    {
+      "id": 29,
+      "block": "especifico",
+      "category": "Higiene",
+      "question": "pH seguridad alimentos:",
+      "options": [
+        "<4.6 ácido",
+        ">4.6 neutro",
+        "Ambos",
+        "Solo >7"
+      ],
+      "correct": 2,
+      "explanation": "Seguros: pH<4.6 o aw<0.94."
+    },
+    {
+      "id": 30,
+      "block": "especifico",
+      "category": "PRL",
+      "question": "Señalización suelo resbaladizo:",
+      "options": [
+        "Amarillo/negro",
+        "Rojo/blanco",
+        "Verde/blanco",
+        "Azul/blanco"
+      ],
+      "correct": 0,
+      "explanation": "Triángulo amarillo/negro (peligro resbalón)."
+    }
+  ]
+}
