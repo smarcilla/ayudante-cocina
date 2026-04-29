@@ -1,4 +1,5 @@
 import { createContext, useContext, useReducer, useEffect } from 'react'
+import { EXAM_CONFIG } from '../config'
 
 const ExamContext = createContext(null)
 
@@ -10,6 +11,7 @@ const initialState = {
   current: 0,
   timeLeft: 0,
   timerId: null,
+  penalty: 0,
 }
 
 function examReducer(state, action) {
@@ -20,6 +22,7 @@ function examReducer(state, action) {
         exam: action.payload.exam,
         questions: action.payload.questions || [],
         answers: action.payload.answers || {},
+        penalty: action.payload.penalty || EXAM_CONFIG.penalty.default,
         screen: 'quiz',
         current: 0,
       }
@@ -72,7 +75,7 @@ export function shuffleArray(array) {
 
 export function selectQuestionsByBlocks(exam) {
   const questions = []
-  exam.config.blocks.forEach(block => {
+  EXAM_CONFIG.blocks.default.forEach(block => {
     const blockQuestions = exam.questions
       .filter(q => q.block === block.id)
       .sort(() => Math.random() - 0.5)
