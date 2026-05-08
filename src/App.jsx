@@ -10,7 +10,7 @@ function Header() {
   const [displayTime, setDisplayTime] = useState('--:--')
 
   useEffect(() => {
-    if (state.screen === 'quiz' && state.timeLeft > 0) {
+    if (state.screen === 'quiz' && state.timeLeft >= 0) {
       const updateTime = () => {
         const m = Math.floor(state.timeLeft / 60)
         const s = state.timeLeft % 60

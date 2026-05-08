@@ -32,27 +32,6 @@ export default function HomeScreen() {
             EXAM_CONFIG.penalty.default,
         );
 
-        const errors = [];
-        if (mode === "exam") {
-          for (const block of EXAM_CONFIG.blocks.default) {
-            const available = exam.questions.filter(
-              (q) => q.block === block.id,
-            ).length;
-            if (available < block.numQuestions) {
-              errors.push(
-                `${block.label}: necesita ${block.numQuestions}, encontradas ${available}`,
-              );
-            }
-          }
-        }
-
-        if (errors.length > 0) {
-          alert(
-            "El JSON no tiene suficientes preguntas:\n" + errors.join("\n"),
-          );
-          return;
-        }
-
         let questions;
         if (mode === "practice") {
           questions = shuffleArray(exam.questions);

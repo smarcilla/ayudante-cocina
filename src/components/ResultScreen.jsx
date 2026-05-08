@@ -1,8 +1,10 @@
+import { useState } from "react";
 import { useExam } from "../context/ExamContext";
 
 export default function ResultScreen() {
   const { state, dispatch } = useExam();
   const { questions, answers } = state;
+  const [filter, setFilter] = useState("all");
 
   if (!questions?.length) return null;
 
@@ -18,15 +20,16 @@ export default function ResultScreen() {
     else ko++;
   });
 
-  const finalScore = ok - ko * (state.penalty || 0);
+  const rawScore = ok - ko * (state.penalty || 0);
+  const clampedScore = Math.max(0, rawScore);
   const numQuestions = questions.length;
-  const percent = numQuestions > 0 ? (finalScore / numQuestions) * 100 : 0;
+  const nota010 = numQuestions > 0 ? (clampedScore / numQuestions) * 10 : 0;
 
   let analysis = "";
-  if (percent >= 80) {
+  if (nota010 >= 8) {
     analysis =
       "<strong>Nivel Plaza!</strong> Estás en un estado de forma excelente. Sigue repasando los fallos puntuales para asegurar el 10 en el oficial.";
-  } else if (percent >= 50) {
+  } else if (nota010 >= 5) {
     analysis =
       "<strong>Bien, pero falta pulir.</strong> Has aprobado, pero en una oposición real dependes de la nota de corte. Necesitas asegurar más temas específicos.";
   } else {
@@ -36,6 +39,20 @@ export default function ResultScreen() {
 
   const handleRestart = () => {
     dispatch({ type: "RESET" });
+  };
+
+  const filterLabels = {
+    all: "Todas las preguntas",
+    ko: "Fallos",
+    null: "Preguntas en blanco",
+    ok: "Aciertos",
+  };
+
+  const filterCounts = {
+    all: questions.length,
+    ko: ko,
+    null: bl,
+    ok: ok,
   };
 
   return (
@@ -56,7 +73,13 @@ export default function ResultScreen() {
         <div className="panel" style={{ textAlign: "center", margin: 0 }}>
           <small>Nota Final</small>
           <div style={{ fontSize: 24, fontWeight: 900 }}>
-            {finalScore.toFixed(2)}
+            {nota010.toFixed(2)}/10
+          </div>
+        </div>
+        <div className="panel" style={{ textAlign: "center", margin: 0 }}>
+          <small>Puntos Brutos</small>
+          <div style={{ fontSize: 20 }}>
+            {rawScore.toFixed(2)}
           </div>
         </div>
         <div className="panel" style={{ textAlign: "center", margin: 0 }}>
@@ -81,8 +104,20 @@ export default function ResultScreen() {
         </div>
       </div>
 
+      <div style={{ display: "flex", gap: 8, marginBottom: 20, flexWrap: "wrap" }}>
+        {Object.entries(filterLabels).map(([key, label]) => (
+          <button
+            key={key}
+            className={filter === key ? "" : "secondary"}
+            onClick={() => setFilter(key)}
+          >
+            {label} ({filterCounts[key]})
+          </button>
+        ))}
+      </div>
+
       <h3 style={{ borderBottom: "1px solid var(--line)", paddingBottom: 10 }}>
-        Revisión de Fallos
+        {filterLabels[filter]}
       </h3>
       <div>
         {questions.map((q, i) => {
@@ -91,6 +126,8 @@ export default function ResultScreen() {
           if (ans === null || ans === undefined) statusClass = "null";
           else if (ans === q.correct) statusClass = "ok";
           else statusClass = "ko";
+
+          if (filter !== "all" && statusClass !== filter) return null;
 
           return (
             <div key={i} className={`review-item ${statusClass}`}>
